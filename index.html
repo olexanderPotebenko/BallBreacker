@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Paddle</title>
+
+</head>
+<body>
+	<script type="text/javascript" src="physics/physics.js"				></script>
+	<script type='text/javascript' src='character/primitives.js'			></script>
+
+	<script type='text/javascript' src='character/data.js'			></script>
+	<script type='text/javascript' src='character/colider.js'			></script>
+	<script type='text/javascript' src='levels/levels.js'		></script>
+	<script type='text/javascript' scr='scene/process.js'				></script>
+	<script type='text/javascript' scr='scene/scene.js'				></script>
+<script>
+
+	function keyUpHandler(e){
+		if(e.key == 'Right' || e.key == 'ArrowRight'){
+			rightPressed = false;
+		}else if(e.key == 'Left' || e.key == "ArrowLeft"){
+			leftPressed = false;
+		};
+		if(e.key == 'ArrowUp')
+			upPressed = true;
+		if(e.key == 'ArrowDown')
+			downPressed = true;
+		if(e.key == 'Enter')
+			enterPressed = true;
+		if(e.key == 'Escape')
+			escapePressed = true;
+	};
+
+	function keyDownHandler(e){
+		if(e.key == 'Right' || e.key == 'ArrowRight'){
+			rightPressed = true;
+		}else if(e.key == 'Left' || e.key == "ArrowLeft"){
+			leftPressed = true;
+		};
+	};
+
+	const W = 360, H = 640;
+
+	let cnvArr = [];
+
+	cnvArr.push(document.createElement('canvas'));
+	cnvArr[0].id = "bg";
+	cnvArr[0].width = W;
+	cnvArr[0].height = H;
+	cnvArr[0].style.zIndex = 0;
+	cnvArr[0].style.position = "absolute";
+	cnvArr[0].style.border = "1px solid";
+	cnvArr[0].style.background = 'rgba(30,20,50, .1)'
+
+	var body = document.getElementsByTagName("body")[0];
+	body.appendChild(cnvArr[0]);
+
+	coliderTest();
+</script>
+
+</body>
+</html>
