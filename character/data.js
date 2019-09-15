@@ -1,4 +1,4 @@
-//Components Data
+//object Components
 
 class Data{
 	constructor(){
@@ -11,7 +11,7 @@ function getImage(arr, w, h){
 	canvas.width = this.w;
 	canvas.height = this.h;
 	let ctx = canvas.getContext('2d');
-		
+
 	for(let i = 0; i < this.arr.length; i++){
 		this.arr[i].draw(ctx);
 	};
@@ -23,12 +23,12 @@ function getImage(arr, w, h){
 
 class Skin extends Data{
 	constructor(img){
-		this.img = img; 
+		this.img = img;
 	};
 	draw(pos){
 		ctx.drawImage(this.img, pos.x, pos.y);
 	};
-	
+
 };
 
 class Position extends Data{
@@ -76,7 +76,7 @@ class KineticParams extends Data{
 			else if(vector < 0)
 				return calcVector(vector + Math.PI*2);
 		};
-		
+
 		this.vector = calcVector(vector);
 	};
 };
@@ -97,34 +97,3 @@ class PhysicalParams extends Data{
 							(friction < 0? 0: 1);
 	};
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
