@@ -51,6 +51,10 @@ class Health extends Data{
 	};
 };
 
+class Debaff extends Data{
+
+};
+
 class Damage extends Data{
 	constructor(min, max){
 		this.min = min;
@@ -59,6 +63,16 @@ class Damage extends Data{
 	getDamage(){
 		return this.max - Math.random() * (this.max - this.min);
 	};
+};
+
+class BuffDamage extends Data(){
+		constructor(damag, timeOfAction){
+				this.damage = damage;
+				this.timeOfAction = timeOfAction;
+		};
+		getBuffDamage(){
+
+		};
 };
 
 class KineticParams extends Data{

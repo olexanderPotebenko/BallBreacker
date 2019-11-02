@@ -1,7 +1,15 @@
-class CharacterDamageController{
+class Behavior{
+
+};
+
+class ToDamage extends{
     constructor(){
 
     };
+};
+
+class TakeDamage extends{
+
 };
 
 class CharacterCollisionHandler{

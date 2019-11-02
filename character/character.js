@@ -13,20 +13,21 @@
 */
 
 class GameObject{
-	constructor(){
-
-	};
-
-
 
 };
 
 class Edge extends GameObject{
-
+	constructor(img, position, colider, animation){
+		super();
+		this.scin = new Skin(img);
+		this.position = new Position(position);
+		this.colider = new trueColider(colider);
+		this.animation = new Animation();
+	};
 };
 
 class Brick  extends GameObject{
-	constructor(imgArr, hitbox,
+	constructor(img, hitbox,
 				animations,
 				weight,
 				health){
